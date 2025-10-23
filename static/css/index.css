@@ -29,7 +29,7 @@ html {
 }
 
 body {
-  font-family: 'Inter', 'Segoe UI', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-family: 'Google Sans', 'Segoe UI', -apple-system, BlinkMacSystemFont, sans-serif;
   color: var(--text-primary);
   line-height: 1.6;
   font-size: 16px;
@@ -103,13 +103,21 @@ body {
   padding: 4rem 1.5rem;
 }
 
+.container.is-max-desktop .hero-body {
+  padding-top: 0;
+}
+
+.info-part{
+  padding-bottom: 2rem;
+}
+
 .teaser .hero-body {
-  padding-top: 2rem;
+  padding-top: 1 rem;
   padding-bottom: 4rem;
 }
 
 .teaser {
-  font-family: 'Inter', sans-serif;
+  font-family: 'Google Sans', sans-serif;
 }
 
 
@@ -120,6 +128,11 @@ body {
     color: var(--text-primary) !important;
     margin-bottom: 2rem !important;
     line-height: 1.1 !important;
+    /* Allow title to visually break out of the max-width container */
+    width: 90vw !important;
+    max-width: 90vw !important;
+    margin-left: calc(50% - 45vw) !important; /* center 90vw inside viewport */
+    text-align: center;
 }
 
 .publication-banner {
@@ -202,7 +215,12 @@ body {
 
 .author-block {
   display: inline-block;
+  font-size: 18px;
   margin-right: 0.5rem;
+}
+
+.author-block.Affiliation {
+  font-size: 18px;
 }
 
 .publication-banner img {
@@ -281,6 +299,9 @@ body {
   border-radius: var(--border-radius);
   width: 100%;
   height: auto;
+  max-height: 400px !important;
+  object-fit: contain;
+  object-position: center;
 }
 
 .results-carousel .subtitle {
@@ -609,9 +630,12 @@ code {
   }
   
   .publication-title {
-    font-size: 2.5rem !important;
+    font-size: 2.2rem !important;
     line-height: 1.2 !important;
     margin-bottom: 1.5rem !important;
+    width: 92vw !important;
+    max-width: 92vw !important;
+    margin-left: calc(50% - 46vw) !important;
   }
   
   .publication-authors {
@@ -647,6 +671,11 @@ code {
     padding: 1rem;
   }
   
+  .results-carousel .item img,
+  .results-carousel video {
+    max-height: 500px !important;
+  }
+  
   .teaser .hero-body {
     padding: 1rem;
   }
@@ -658,7 +687,10 @@ code {
 
 @media screen and (max-width: 480px) {
   .publication-title {
-    font-size: 2rem !important;
+    font-size: 1.8rem !important;
+    width: 94vw !important;
+    max-width: 94vw !important;
+    margin-left: calc(50% - 47vw) !important;
   }
   
   .hero-body {
@@ -693,6 +725,11 @@ code {
   .button {
     width: 100%;
     justify-content: center;
+  }
+  
+  .results-carousel .item img,
+  .results-carousel video {
+    max-height: 500px !important;
   }
 }
 
